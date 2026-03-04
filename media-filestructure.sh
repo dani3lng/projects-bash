@@ -24,15 +24,16 @@ if [ ! -d "${DIR}" ]; then
     done
     for item in "${year_array[@]}"; do
         cd $item
+            mkdir title
+            cd title
             mkdir Fujifilm \Hasselblad \DJI
             cd Fujifilm && mkdir Photo Video
             cd ..
             cd Hasselblad && mkdir Photo Video
-            cd ..
+            cd .. 
             cd DJI && mkdir Photo Video
-            cd .. && cd ..
+            cd .. && cd .. && cd ..
     done
-    cd ..
     ls -l ${DIR}
 else
     echo "Directory "${DIR}" already exists"
